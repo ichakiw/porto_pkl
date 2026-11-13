@@ -1,0 +1,78 @@
+.contact {
+  background: var(--bg-color);
+}
+
+.contactGrid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem 2rem;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  text-decoration: none;
+  color: var(--text-color);
+  min-width: 120px;
+}
+
+.contactItem:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+  background: var(--primary-color);
+  color: white;
+}
+
+.contactItem .icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.contactItem .icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.contactItem .label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Warna icon saat hover */
+.contactItem:hover .icon svg {
+  fill: white !important;
+}
+
+@media (max-width: 480px) {
+  .contactGrid {
+    gap: 1rem;
+  }
+  
+  .contactItem {
+    padding: 1rem 1.5rem;
+    min-width: 80px;
+  }
+  
+  .contactItem .icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .contactItem .icon svg {
+    width: 28px;
+    height: 28px;
+  }
+}

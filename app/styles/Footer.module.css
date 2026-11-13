@@ -1,0 +1,27 @@
+.footer {
+  background: var(--text-color);
+  color: var(--bg-color);
+  text-align: center;
+  padding: 2rem 20px;
+  margin-top: 0;
+}
+
+.footer p {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.footer .heart {
+  color: #ef4444;
+  display: inline-block;
+  animation: pulse 1.5s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}

@@ -1,0 +1,251 @@
+.about {
+  background: var(--bg-color);
+  padding: 80px 20px;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aboutCard {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.aboutCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.aboutCard h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.aboutCard ul {
+  list-style: none;
+  padding: 0;
+}
+
+.aboutCard ul li {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.aboutCard ul li:last-child {
+  border-bottom: none;
+}
+
+.aboutCard ul li span:first-child {
+  font-weight: 600;
+  min-width: 120px;
+  flex-shrink: 0;
+  color: var(--text-color);
+}
+
+.aboutCard ul li span:last-child {
+  color: var(--text-color);
+  opacity: 0.85;
+  word-break: break-word;
+}
+
+.addressText {
+  display: block;
+  line-height: 1.6;
+  font-style: normal;
+}
+
+.summaryText {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  opacity: 0.85;
+}
+
+.summaryText:last-child {
+  margin-bottom: 0;
+}
+
+.educationItem {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--bg-color);
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.educationItem:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+}
+
+.educationItem h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.3rem;
+}
+
+.educationItem h4 a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.educationItem h4 a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+.educationItem p {
+  opacity: 0.8;
+  margin: 0;
+}
+
+.schoolLink {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.schoolLink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: var(--transition);
+}
+
+.schoolLink:hover {
+  color: var(--secondary-color);
+}
+
+.schoolLink:hover::after {
+  width: 100%;
+}
+
+.schoolLink .linkIcon {
+  display: inline-block;
+  margin-left: 0.3rem;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.schoolLink:hover .linkIcon {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+.purposeList {
+  list-style: none;
+  padding: 0;
+}
+
+.purposeList li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--border-color);
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+  color: var(--text-color);
+  opacity: 0.85;
+}
+
+.purposeList li::before {
+  content: "▸";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.purposeList li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 15px;
+  }
+  
+  .about h2 {
+    font-size: 2rem;
+  }
+  
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .aboutCard {
+    padding: 1.5rem;
+  }
+  
+  .aboutCard ul li {
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.6rem 0;
+  }
+  
+  .aboutCard ul li span:first-child {
+    min-width: auto;
+    font-size: 0.95rem;
+  }
+  
+  .aboutCard ul li span:last-child {
+    font-size: 0.9rem;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 40px 10px;
+  }
+  
+  .about h2 {
+    font-size: 1.5rem;
+  }
+  
+  .aboutCard {
+    padding: 1rem;
+  }
+  
+  .aboutCard h3 {
+    font-size: 1.1rem;
+  }
+  
+  .educationItem {
+    padding: 0.8rem;
+  }
+}

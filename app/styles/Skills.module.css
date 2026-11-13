@@ -1,0 +1,134 @@
+.skills {
+  background: var(--card-bg);
+  padding: 80px 20px;
+}
+
+.skills h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skillCard {
+  background: var(--bg-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.skillCard:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+  border-color: var(--primary-color);
+}
+
+.skillCard .icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skillCard .icon svg {
+  width: 48px;
+  height: 48px;
+  transition: var(--transition);
+}
+
+.skillCard:hover .icon svg {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.skillCard h4 {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+.skillCard .level {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.2rem 0.8rem;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.skillCard:hover .level {
+  background: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 60px 15px;
+  }
+  
+  .skills h2 {
+    font-size: 2rem;
+  }
+  
+  .skillsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills {
+    padding: 40px 10px;
+  }
+  
+  .skills h2 {
+    font-size: 1.5rem;
+  }
+  
+  .skillsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 0.8rem;
+  }
+  
+  .skillCard {
+    padding: 1rem;
+  }
+  
+  .skillCard .icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .skillCard .icon svg {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .skillCard h4 {
+    font-size: 0.85rem;
+  }
+  
+  .skillCard .level {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.6rem;
+  }
+}
